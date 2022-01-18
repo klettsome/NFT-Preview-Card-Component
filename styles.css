@@ -5,6 +5,7 @@
 }
 
 body {
+  margin: 0;
   background-color: hsl(217, 54%, 11%);
   font-family: 'Outfit', sans-serif;
 }
@@ -14,11 +15,11 @@ a {
 }
 
 p {
-  margin: 15px 0;
+  margin: 0.9rem 0;
 }
 
 svg {
-  margin-right: 6px;
+  margin-right: 0.37rem;
 }
 
 span a {
@@ -30,36 +31,53 @@ span a:hover {
   color: hsl(178, 100%, 50%);
 }
 
-.center {
-  height: 900px;
-  position: relative;
-}
-
-.card-container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+main {
+  width: 100vw;
+  height: 95vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .card {
-  width: 350px;
-  height: 600px;
-  padding: 25px;
+  width: 21.9rem;
+  height: 37.5rem;
+  padding: 1.6rem;
   background-color: hsl(216, 50%, 16%);
   border-radius: 10px;
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
 }
 
 .card-image {
-  width: 300px;
-  margin: 0 auto 15px auto;
+  position: relative;
+  width: 18.75rem;
+  height: 18.75rem;
+  margin: 0 auto 1.5rem auto;
 }
 
 .card-image img {
   width: 100%;
   border-radius: 6px;
+}
+
+.card-image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsla(178, 100%, 50%, 0.5);
+  border-radius: 6px;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+  cursor: pointer;
+}
+
+.card-image:hover .card-image-overlay {
+  opacity: 1;
 }
 
 .card-details {
@@ -69,7 +87,7 @@ span a:hover {
 
 .card-title {
   color: hsl(0, 0%, 100%);
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 400;
   transition: color 0.4s ease-in-out;
   cursor: pointer;
@@ -80,14 +98,14 @@ span a:hover {
 }
 
 .card-details > p {
-  font-size: 18px;
+  font-size: 1.13rem;
 }
 
 .card-details-more {
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid hsl(215, 32%, 27%);
-  margin-bottom: 15px;
+  margin-bottom: 0.9rem;
 }
 
 .color-text {
@@ -98,18 +116,18 @@ span a:hover {
 .svg-center {
   display: flex;
   align-items: center;
-  padding-bottom: 15px;
+  padding-bottom: 0.9rem;
 }
 
 .avatar-container {
-  width: 230px;
+  width: 14.38rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .avatar-image {
-  width: 40px;
+  width: 2.5rem;
   margin: 0;
 }
 
@@ -120,8 +138,8 @@ span a:hover {
 }
 
 .attribution {
-  margin-top: 30px;
-  font-size: 11px;
+  margin-top: 1.88rem;
+  font-size: 0.7rem;
   text-align: center;
   color: hsl(0, 0%, 91%);
 }
